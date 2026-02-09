@@ -11,7 +11,7 @@ public class Plugin : BaseUnityPlugin
 
     private void Awake()
     {
-        MaxItems = Config.Bind<int>("General", "MaxItems", 9, "The number of available picks in the item machine.");
+        MaxItems = Config.Bind<int>("General", "MaxItems", 15, "The number of available picks in the item machine.");
         Harmony.CreateAndPatchAll(typeof(NineItemPatch));
         Logger.LogInfo($"Mod {MyPluginInfo.PLUGIN_GUID} is loaded!");
     }
